@@ -155,5 +155,114 @@ function fundamentosJS() {
         console.log(clave);
         console.log(profesor[clave]);
     }
+
+    const e1 = {
+        nombre: 'Edison',
+        apellido: 'Cayambe',
+        edad: 35,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'Quito'
+    }
+    const e2 = {
+        nombre: 'Edison',
+        apellido: 'Cayambe',
+        edad: 35,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'Quito'
+    }
+
+    const arregloEstudiantes = [e1, e2, {
+        nombre: 'Edison 3',
+        apellido: 'Cayambe',
+        edad: 35,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'Quito'
+    }];
+    console.log(arregloEstudiantes[0]);
+    console.log(arregloEstudiantes[2]);
+
+    /* Desestructuración */
+    // Arreglos
+    const ar1 = [1, 2, 3, 4, 5, 6, 7];
+    const [p1, p2, p3, p4, p5] = ar1;
+    console.log(p1);
+    console.log(p4);
+
+    const [primero, , , , , , ultimo] = ar1;
+    console.log(primero);
+    console.log(ultimo);
+
+    const [pos1, pos2] = [1, 2, 3, 4, 5, 6, 7];
+    imprime(ar1);
+
+    // Objetos
+
+    const e3 = {
+        nombre: 'Edison',
+        apellido: 'Cayambe',
+        edad: 35,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'Quito'
+    }
+
+    const { nombre: n1, ciudad: c } = e3;
+    console.log(n1);
+    console.log(c);
+
+    const { nombre: n, ciudad: ciu } = {
+        nombre: 'Edison',
+        apellido: 'Cayambe',
+        edad: 35,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'Quito'
+    };
+    console.log(n);
+    console.log(ciu);
+
+    const e4 = {
+        nombre: 'Edison',
+        apellido: 'Cayambe',
+        edad: 35,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'Quito',
+        dirección: {
+            calle: "Av. America",
+            barrio: "La gasca",
+            numeración: "2343"
+        }
+
+    }
+    console.log(e4.dirección);
+    console.log(e4.dirección.barrio);
+
+    const { edad: ed, dirección } = e4;
+    console.log(ed);
+    console.log(dirección);
+
+    // dos pasos
+    const { calle } = dirección;
+    console.log(calle);
+
+    // 1 solo paso
+    const { dirección: { barrio, calle: c1, numeración } } = e4;
+    console.log(barrio);
+    console.log(c1);
+    console.log(numeración);
+
+
+
+
+}
+
+function imprime([a, b, c]) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
 }
 
