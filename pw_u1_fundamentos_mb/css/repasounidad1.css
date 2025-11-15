@@ -1,0 +1,84 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+}
+
+
+body{
+    background: #f7f8f8;
+}
+
+/* No esta en linea sino arriba */
+p:before{
+    content: attr(type);
+    display: block; /* Ocupa todo el espacio */
+     font-size: 16px;
+    color: #6b6b6b;
+    margin-bottom: 5px;
+    
+}
+
+.formulariovisa {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+
+.formulariovisa section {
+    width: 380px;
+    padding: 0 20px;           
+}
+
+
+.tarjeta {
+    width: 350px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+button {
+    width: 100%;
+    padding: 12px 20px;
+    background: #0d4ce0;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    
+}
+button:hover {
+    background: #1e6ed7;
+}
+
+.centrar-boton{
+    display: flex;
+    justify-content: center;
+}
+
+h2,
+header{
+    color: #3f3b3d;
+    font-size: 35px;
+
+}
+
+.msg_error{
+    background: #f6f8f7;
+    border-left: 5px solid red;
+    padding: 10px;
+    color: #f50202;
+    display: none;
+    font-weight: bold;
+}
+
+.error_asteristico{
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/repasounidad1.css">
+    <script src="../js/repasounidad1.js"> </script>
+</head>
+
+<body>
+    <div class="container">
+        <header></header>
+        
+        <div class="formulariovisa">
+            <img src="../img/visa.jpg" alt="tarjeta">
+            <nav></nav>
+            <section>
+                
+                <form action="#">
+                    <h2>Payment Details</h2>
+                    <div id="id_msg_error" class="msg_error"></div>
+
+                    <p type="Cardholder Name:">
+                        <input id="id_nombre" type="text">
+                        <span id="id_error_nombre" class="error_asteristico"></span>
+                    </p>
+
+                    <p type="Card Number:">
+                        <input id="id_numero" type="numbers">
+                        <span id="id_error_numero" class="error_asteristico"></span>
+                    </p>
+
+                    <p type="Fecha Expedicion:">
+                        <input id="id_fecha" type="date">
+                        <span id="id_error_fecha" class="error_asteristico"></span>
+                    </p>
+
+                    <p type="CVV:">
+                        <input id="id_codigo" type="numbers">
+                        <span id="id_error_codigo" class="error_asteristico"></span>
+                    </p>
+
+                    <div class="boton">
+                        <button onclick="guardar()">Confirm</button>
+
+                    </div>
+
+
+                </form>
+            </section>
+        </div>
+
+        <footer> </footer>
+    </div>
+
+
+</body>
+
+</html>

@@ -14,11 +14,11 @@ function validarCampos() {
 
     }
 
-    let apellido = document.getElementById("id_apellido").value;
+    let numero = document.getElementById("id_numero").value;
 
-    if (apellido === "") {
-        mostrarMensaje("Apellido necesario");
-        mostrarAsterisco("id_error_apellido");
+    if (numero === "") {
+        mostrarMensaje("Numero de Tarjeta necesario");
+        mostrarAsterisco("id_error_numero");
         return;
 
     }
@@ -30,22 +30,12 @@ function validarCampos() {
         return;
 
     }
-    let email = document.getElementById("id_email").value;
-    if (!validarEmail(email)) {
-        mostrarMensaje("Email Incorrecto");
-        mostrarAsterisco('id_error_email');
-    }
-    if (email === "") {
+   
+    let cvv = document.getElementById("id_cvv").value;
 
-        mostrarMensaje("Campo Incompleto");
-        mostrarAsterisco('id_error_email');
-        return;
-    }
-    let password = document.getElementById("id_password").value;
-
-    if (password === "") {
-        mostrarMensaje("Password necesario");
-        mostrarAsterisco("id_error_password");
+    if (cvv === "") {
+        mostrarMensaje("cvv necesario");
+        mostrarAsterisco("id_error_cvv");
         return;
 
     }
@@ -78,26 +68,23 @@ function validarNombre(nombre) {
     return patron.test(nombre);
 }
 
-function validarApellido(apellido) {
-    const patron = /^[A-Za-z]+$/;
-    return patron.test(apellido);
+function validarNumeroTarjeta(numero) {
+    const patron = /^\d{16}$/;
+    return patron.test(numero);
+    
 
 }
+
 function validarFecha(fecha) {
     const patron = /^\d{4}-\d{2}-\d{2}$/;
     return patron.test(fecha);
 
 }
 
-function validarEmail(email) {
 
-    const patron = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    return patron.test(email);
-
-}
-function validarPassword(password) {
-    const patron = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-    return patron.test(password);
+function validarCVV(cvv) {
+    const patron = /^\d{3,4}$/;
+    return patron.test(cvv);
+    
 
 }

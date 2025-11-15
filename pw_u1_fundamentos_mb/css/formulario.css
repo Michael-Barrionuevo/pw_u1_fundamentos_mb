@@ -38,6 +38,12 @@ input:focus{
     box-shadow: 10px 30px #6c6c7c;
 }
 
+.formulariovisa section {
+    width: 380px;
+    padding: 0 20px;           
+}
+
+
 button{
     background: #a7cae1;
     padding: 10px 20px;
